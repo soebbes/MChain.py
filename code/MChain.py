@@ -189,7 +189,7 @@ class MChain(object):
         return mc0 
 
 
-    def display(self, states=[], classes=[], neighbors=True):
+    def display(self, states=[], classes=[], neighbors=True, size=None):
         '''
         display a Markov chain or parts of it
 
@@ -220,9 +220,9 @@ class MChain(object):
             s0 = s[I0]
             c0 = c[I0]
             
-            self._show1(s0, P0, c0)
+            self._show1(s0, P0, c0, size)
         else:
-            self._show1(s, P, c)           
+            self._show1(s, P, c, size)           
            
    
    
@@ -749,6 +749,8 @@ class MChain(object):
         
         if size is None:
             size = '4.5'
+        else:
+            size = str(size)
             
         S = np.arange(len(s))
         G = gv.Digraph()        
