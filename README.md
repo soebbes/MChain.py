@@ -1,2 +1,3 @@
 # MChain.py
-Construct, analyse and run Markov chains with MChain.py
+MChain is a python class for construction, analysing and running Markov chains.
+
